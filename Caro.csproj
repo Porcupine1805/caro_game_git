@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15FBECE8-A639-44B5-ADCB-41FF6C2B7054}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Caro</RootNamespace>
+    <AssemblyName>Caro</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>df_59S_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Begin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Begin.Designer.cs">
+      <DependentUpon>Begin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Box.cs" />
+    <Compile Include="ChessBoardManager.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Howtoplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Howtoplay.Designer.cs">
+      <DependentUpon>Howtoplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mochawin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mochawin.Designer.cs">
+      <DependentUpon>Mochawin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mochalose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mochalose.Designer.cs">
+      <DependentUpon>Mochalose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Milklose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Milklose.Designer.cs">
+      <DependentUpon>Milklose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Milkwin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Milkwin.Designer.cs">
+      <DependentUpon>Milkwin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketData.cs" />
+    <Compile Include="SocketManager.cs" />
+    <EmbeddedResource Include="Begin.resx">
+      <DependentUpon>Begin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Howtoplay.resx">
+      <DependentUpon>Howtoplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mochawin.resx">
+      <DependentUpon>Mochawin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mochalose.resx">
+      <DependentUpon>Mochalose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Milklose.resx">
+      <DependentUpon>Milklose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Milkwin.resx">
+      <DependentUpon>Milkwin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="df_59S_icon.ico" />
+    <None Include="Resources\milkwin.gif" />
+    <None Include="Resources\milklose.gif" />
+    <None Include="Resources\Vanilla-1s-280px %283%291.gif" />
+    <None Include="Resources\Mochalose.gif" />
+    <None Include="Resources\win.gif" />
+    <None Include="Resources\Mochawin.gif" />
+    <None Include="Resources\thegifyouwant.gif" />
+    <None Include="Resources\Vanilla-1s-280px %284%29.gif123.gif" />
+    <None Include="Resources\Vanilla-1s-280px %283%29.gif" />
+    <None Include="Resources\asddf.gif" />
+    <None Include="Resources\1.gif" />
+    <None Include="Resources\Vanilla-1s-280px1.gif" />
+    <None Include="Resources\Vanilla-1s-280px %282%29.gif" />
+    <None Include="Resources\tenor2.gif" />
+    <None Include="Resources\Vanilla-1s-280px %281%29.gif" />
+    <None Include="Resources\123.gif" />
+    <None Include="Resources\Vanilla-1s-280px.gif" />
+    <None Include="Resources\847d71cfe606022936e8acf2f09fb081.gif" />
+    <None Include="Resources\tenor %281%29.gif" />
+    <None Include="Resources\tenor1.gif" />
+    <None Include="Resources\97b3ad13ba06c17de5cef18a4f386d19.gif" />
+    <None Include="Resources\istockphoto-1203194702-1024x1024.jpg" />
+    <None Include="Resources\Untitled.png" />
+    <None Include="Resources\back grond.jpg" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\bloggif_5edda4de96c6c1.gif" />
+    <None Include="Resources\tenor.gif" />
+    <None Include="Resources\e113272f2f2ffbd1f88dbf44989fa17e.gif" />
+    <None Include="Resources\bloggif_5edda4de96c6c.gif" />
+    <None Include="Resources\Howtoplay1.gif" />
+    <None Include="Resources\Howtoplay.gif" />
+    <None Include="Resources\player2.1.gif" />
+    <None Include="Resources\player1.1.gif" />
+    <None Include="Resources\black.png" />
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
